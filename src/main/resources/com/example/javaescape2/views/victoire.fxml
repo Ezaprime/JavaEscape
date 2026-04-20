@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javaescape2.controllers.VictoireController"
+      prefWidth="800" prefHeight="600"
+      alignment="CENTER" spacing="30"
+      style="-fx-background-color: #1a1a2e; -fx-padding: 40;">
+
+    <Label text="🎉 VICTOIRE !"
+           style="-fx-font-size: 48px; -fx-text-fill: #2ecc71; -fx-font-weight: bold;"/>
+
+    <Label fx:id="lblTexte" text=""
+           wrapText="true" maxWidth="600"
+           style="-fx-font-size: 15px; -fx-text-fill: #ffffff;"
+           alignment="CENTER"/>
+
+    <Button text="Rejouer"
+            onAction="#rejouer"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 10 30;"/>
+</VBox>

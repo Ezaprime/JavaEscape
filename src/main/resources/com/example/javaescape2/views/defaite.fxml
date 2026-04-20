@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javaescape2.controllers.DefaiteController"
+      prefWidth="800" prefHeight="600"
+      alignment="CENTER" spacing="30"
+      style="-fx-background-color: #1a1a2e; -fx-padding: 40;">
+
+    <Label text="💥 DEFAITE !"
+           style="-fx-font-size: 48px; -fx-text-fill: #e74c3c; -fx-font-weight: bold;"/>
+
+    <Label text="La bombe a explose. La ville est detruite."
+           style="-fx-font-size: 16px; -fx-text-fill: #ffffff;"/>
+
+    <Label text="On est tous tres decus !"
+           style="-fx-font-size: 14px; -fx-text-fill: #888888;"/>
+
+    <Button text="Rejouer"
+            onAction="#rejouer"
+            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 10 30;"/>
+</VBox>

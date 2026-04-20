@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.javaescape2.controllers.Dialogue3Controller"
+           prefWidth="800" prefHeight="600"
+           style="-fx-background-color: #1a1a2e;">
+
+    <VBox alignment="BOTTOM_CENTER" spacing="0">
+        <Region VBox.vgrow="ALWAYS"/>
+        <HBox style="-fx-background-color: #16213e; -fx-padding: 20; -fx-border-color: #e94560; -fx-border-width: 2 0 0 0;"
+              prefHeight="200" spacing="20" alignment="CENTER_LEFT">
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <Label fx:id="lblNom" text="Chef"
+                       style="-fx-font-size: 18px; -fx-text-fill: #e94560; -fx-font-weight: bold;"/>
+                <Label fx:id="lblTexte" text=""
+                       wrapText="true"
+                       style="-fx-font-size: 14px; -fx-text-fill: #ffffff;"
+                       maxWidth="650"/>
+                <Label text="[ESPACE] pour continuer"
+                       style="-fx-font-size: 11px; -fx-text-fill: #888888;"/>
+            </VBox>
+        </HBox>
+    </VBox>
+</StackPane>

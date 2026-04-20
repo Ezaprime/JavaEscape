@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.javaescape2.controllers.MenuController"
+           prefWidth="800" prefHeight="600"
+           style="-fx-background-color: #1a1a2e;">
+
+    <VBox alignment="CENTER" spacing="20">
+
+        <Label text="Java Escape"
+               style="-fx-font-size: 48px; -fx-text-fill: #e94560; -fx-font-weight: bold;"/>
+
+        <Label text="Sauverez-vous la ville ?"
+               style="-fx-font-size: 16px; -fx-text-fill: #ffffff;"/>
+
+        <VBox alignment="CENTER" spacing="12" style="-fx-padding: 40 0 0 0;">
+
+            <Button fx:id="btnNouvelle" text="Nouvelle Partie"
+                    onAction="#nouvellePartie"
+                    style="-fx-background-color: #e94560; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 200px; -fx-padding: 10 20;"/>
+
+            <Button fx:id="btnReprendre" text="Reprendre"
+                    onAction="#reprendrePartie"
+                    style="-fx-background-color: #16213e; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 200px; -fx-padding: 10 20; -fx-border-color: #e94560; -fx-border-width: 2;"/>
+
+            <Button fx:id="btnQuitter" text="Quitter"
+                    onAction="#quitter"
+                    style="-fx-background-color: #16213e; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 200px; -fx-padding: 10 20; -fx-border-color: #e94560; -fx-border-width: 2;"/>
+        </VBox>
+    </VBox>
+</StackPane>
