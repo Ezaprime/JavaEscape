@@ -21,10 +21,10 @@ public class DialogueController {
     private ImageView imgPersonnage;
 
     private String[] dialogues = {
-            "Ecoute-moi bien. Une bombe a ete placee quelque part en ville, et tout repose sur toi. Nous n'avons pas de temps a perdre. Chaque seconde compte.",
-            "Voici la situation : tu vas devoir resoudre une serie d'enigmes. Chacune te donnera des indices pour localiser la bombe. Le temps presse.",
-            "Je sais que ce n'est pas facile, mais je crois en toi. Nous avons les outils necessaires, et tu as l'intelligence pour dechiffrer ces enigmes.",
-            "Ne laisse pas la pression te faire trebucher. Resous les enigmes, trouve l'emplacement de la bombe, et nous pourrons la desamorcer."
+            "Ecoute-moi bien. Une bombe a ete placee quelque part en ville.",
+            "Tu vas devoir resoudre des enigmes pour localiser la bombe.",
+            "Je crois en toi. Tu as les outils pour reussir cette mission.",
+            "Ne laisse pas la pression te faire trebucher. On compte sur toi."
     };
 
     private int indexDialogue = 0;
@@ -34,7 +34,6 @@ public class DialogueController {
     @FXML
     public void initialize() {
         afficherDialogue(dialogues[indexDialogue]);
-
         javafx.application.Platform.runLater(() -> {
             MainApp.mainStage.getScene().setOnKeyPressed(event -> {
                 if (event.getCode() == KeyCode.SPACE) {
@@ -47,11 +46,9 @@ public class DialogueController {
     private void afficherDialogue(String texte) {
         estEnTrain = true;
         lblTexte.setText("");
-
         final int[] i = {0};
         timeline = new Timeline();
         timeline.setCycleCount(Timeline.INDEFINITE);
-
         KeyFrame kf = new KeyFrame(Duration.millis(30), e -> {
             if (i[0] < texte.length()) {
                 lblTexte.setText(lblTexte.getText() + texte.charAt(i[0]));
@@ -61,7 +58,6 @@ public class DialogueController {
                 estEnTrain = false;
             }
         });
-
         timeline.getKeyFrames().add(kf);
         timeline.play();
     }
@@ -76,14 +72,14 @@ public class DialogueController {
             if (indexDialogue < dialogues.length) {
                 afficherDialogue(dialogues[indexDialogue]);
             } else {
-                allerAuQuiz();
+                allerSuite();
             }
         }
     }
 
-    private void allerAuQuiz() {
+    private void allerSuite() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javaescape2/views/quiz.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javaescape2/views/dialogue2.fxml"));
             Scene scene = new Scene(loader.load(), 800, 600);
             MainApp.mainStage.setScene(scene);
         } catch (Exception e) {
